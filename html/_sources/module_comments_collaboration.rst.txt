@@ -1,0 +1,7 @@
+module\_comments\_collaboration module
+======================================
+
+.. automodule:: module_comments_collaboration
+   :members:
+   :show-inheritance:
+   :undoc-members:

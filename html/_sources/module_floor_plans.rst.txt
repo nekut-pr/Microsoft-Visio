@@ -1,0 +1,7 @@
+module\_floor\_plans module
+===========================
+
+.. automodule:: module_floor_plans
+   :members:
+   :show-inheritance:
+   :undoc-members:

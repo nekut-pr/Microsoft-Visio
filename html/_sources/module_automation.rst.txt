@@ -1,0 +1,7 @@
+module\_automation module
+=========================
+
+.. automodule:: module_automation
+   :members:
+   :show-inheritance:
+   :undoc-members:

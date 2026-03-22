@@ -1,0 +1,7 @@
+module\_shapes module
+=====================
+
+.. automodule:: module_shapes
+   :members:
+   :show-inheritance:
+   :undoc-members:

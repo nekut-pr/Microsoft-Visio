@@ -1,0 +1,7 @@
+module\_gamification module
+===========================
+
+.. automodule:: module_gamification
+   :members:
+   :show-inheritance:
+   :undoc-members:

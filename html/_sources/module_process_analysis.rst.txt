@@ -1,0 +1,7 @@
+module\_process\_analysis module
+================================
+
+.. automodule:: module_process_analysis
+   :members:
+   :show-inheritance:
+   :undoc-members:

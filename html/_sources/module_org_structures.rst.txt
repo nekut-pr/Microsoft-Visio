@@ -1,0 +1,7 @@
+module\_org\_structures module
+==============================
+
+.. automodule:: module_org_structures
+   :members:
+   :show-inheritance:
+   :undoc-members:

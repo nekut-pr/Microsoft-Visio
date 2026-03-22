@@ -1,0 +1,7 @@
+module\_process\_improvement module
+===================================
+
+.. automodule:: module_process_improvement
+   :members:
+   :show-inheritance:
+   :undoc-members:

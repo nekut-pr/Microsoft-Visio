@@ -1,0 +1,7 @@
+module\_sharing\_export module
+==============================
+
+.. automodule:: module_sharing_export
+   :members:
+   :show-inheritance:
+   :undoc-members:

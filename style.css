@@ -1,0 +1,355 @@
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+:root {
+    --navigationWidth: 280px;
+}
+
+/* Стили для навигационного меню - делаем его прокручиваемым */
+.navigationMenu{
+    display: flex;
+    width: var(--navigationWidth);
+    position: fixed;
+    top: 100px; /* Отступ от header */
+    left: 0;
+    height: calc(100vh - 100px); /* Высота на весь экран минус header */
+    background-color: #202020;
+    overflow-y: auto; /* Включаем вертикальную прокрутку */
+    overflow-x: hidden;
+    z-index: 100;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+}
+
+/* Стилизация скроллбара для WebKit браузеров (Chrome, Safari, Edge) */
+.navigationMenu::-webkit-scrollbar {
+    width: 8px;
+}
+
+.navigationMenu::-webkit-scrollbar-track {
+    background: #2a2a2a;
+    border-radius: 4px;
+}
+
+.navigationMenu::-webkit-scrollbar-thumb {
+    background: #5f3f3f;
+    border-radius: 4px;
+}
+
+.navigationMenu::-webkit-scrollbar-thumb:hover {
+    background: #8b5a5a;
+}
+
+.navigationList{
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    width: 100%;
+}
+
+.navigationOuterItem{
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #202020;
+    text-decoration: none;
+    color: gainsboro;
+    word-wrap: break-word;
+    font-family: "Kode Mono", monospace;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+    
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.navigationOuterItem:hover {
+    background-color: #2f2f2f;
+    border-left-color: #F1C834;
+}
+
+.navigationInnerItem{
+    display: block;
+    width: 100%;
+    padding: 8px 15px 8px 30px;
+    background-color: #202020;
+    text-decoration: none;
+    color: #b0b0b0;
+    word-wrap: break-word;
+    text-align: left;
+    font-family: "Kode Mono", monospace;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.navigationInnerItem:hover {
+    background-color: #2f2f2f;
+    border-left-color: #F1C834;
+}
+
+.navigationOuterItemActive{
+    background-color: #3a2a2a;
+    color: #F1C834;
+    border-left-color: #F1C834;
+}
+
+.navigationInnerItemActive{
+    background-color: #3a2a2a;
+    color: #F1C834;
+    border-left-color: #F1C834;
+}
+
+/* Основной контент */
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    background-color: #333;
+    background-blend-mode: screen;
+    background-repeat: no-repeat;
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: #111111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: flex-end;
+    z-index: 200;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.HELP_MANUAL{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: auto;
+    padding: 0 10px;
+    gap: 10px;
+}
+
+.buttonManual{
+    width: 140px;
+    height: 50px;
+    background: rgba(30, 29, 29, 0.8);
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.buttonManual:hover{
+    background: linear-gradient(135deg, #F1C834, #5f3f3f);
+    box-shadow: 0 0 15px rgba(241,200,52,0.3);
+    transform: translateY(-2px);
+}
+
+.footer{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    padding: 1rem;
+    background-color: #111111;
+    justify-content: center;
+    align-items: center;
+    color: #5f3f3f;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-top: 3rem;
+    z-index: 3;
+}
+
+/* Контейнер для контента */
+.container{
+    display: flex;
+    background-color: #111111;
+    width: calc(100% - var(--navigationWidth));
+    max-width: 1200px;
+    min-height: calc(100vh - 100px);
+    padding: 30px 40px;
+    flex-wrap: wrap;
+    margin-left: var(--navigationWidth);
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+.outerContainer{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.sectionContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.section{
+    height: auto;
+    border-bottom: 2px solid #5f3f3f;
+    width: 100%;
+    padding: 20px 0;
+    scroll-margin-top: 110px; /* Отступ для якоря, чтобы не скрывалось под header */
+}
+
+.section:first-child {
+    padding-top: 0;
+}
+
+/* Типографика */
+.introduction{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    color: gainsboro;
+    font-weight: 500;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.paragraphMargin{
+    text-indent: 50px;
+    margin: 15px 0;
+}
+
+.titleStyle{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #F1C834;
+    font-weight: 700;
+    font-style: normal;
+    font-variant: normal;
+    margin: 20px 0 15px 0;
+    border-left: 4px solid #F1C834;
+    padding-left: 15px;
+}
+
+.subtitleStyle{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #c0c0c0;
+    font-weight: 600;
+    font-style: normal;
+    font-variant: normal;
+    margin: 15px 0 10px 0;
+}
+
+.textStyle{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    color: gainsboro;
+    font-weight: 400;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-align: justify;
+    text-indent: 50px;
+    margin: 0 0 12px 0;
+    line-height: 1.5;
+}
+
+.codeClass{
+    color: #F1C834;
+    font-family: "Kode Mono", monospace;
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    background-color: #000000;
+    padding: 3px 8px;
+    border-radius: 8px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    :root {
+        --navigationWidth: 240px;
+    }
+    
+    .navigationMenu {
+        width: var(--navigationWidth);
+    }
+    
+    .container {
+        width: calc(100% - var(--navigationWidth));
+        padding: 20px;
+        margin-left: var(--navigationWidth);
+    }
+    
+    .titleStyle {
+        font-size: 24px;
+    }
+    
+    .textStyle, .introduction {
+        font-size: 14px;
+    }
+    
+    .buttonManual {
+        width: 100px;
+        font-size: 12px;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    .navigationMenu {
+        width: 200px;
+    }
+    
+    .container {
+        width: calc(100% - 200px);
+        margin-left: 200px;
+        padding: 15px;
+    }
+    
+    .navigationOuterItem {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}

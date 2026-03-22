@@ -1,0 +1,7 @@
+module\_training\_documentation module
+======================================
+
+.. automodule:: module_training_documentation
+   :members:
+   :show-inheritance:
+   :undoc-members:

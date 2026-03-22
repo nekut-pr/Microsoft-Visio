@@ -1,0 +1,7 @@
+module\_integration\_office module
+==================================
+
+.. automodule:: module_integration_office
+   :members:
+   :show-inheritance:
+   :undoc-members:

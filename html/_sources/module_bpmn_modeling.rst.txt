@@ -1,0 +1,7 @@
+module\_bpmn\_modeling module
+=============================
+
+.. automodule:: module_bpmn_modeling
+   :members:
+   :show-inheritance:
+   :undoc-members:

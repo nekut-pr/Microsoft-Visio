@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="wow.min.js"></script>
+    <script>new WOW().init()</script>
+    <script src="https://kit.fontawesome.com/fc5368a64a.js" crossorigin="anonymous"></script>
+    <title>Система визуального моделирования процессов в Microsoft Visio</title>
+</head>
+
+<script>
+    window.addEventListener('scroll', () => {
+        let distance = window.scrollY;
+        
+        document.querySelectorAll('.section').forEach((item, i)=>{
+
+            if  (item.offsetTop <= distance) {
+                
+                document.querySelectorAll(".navigationInnerItem, .navigationOuterItem").forEach((item) => {
+                    if (item.classList.contains('navigationInnerItemActive')) 
+                        item.classList.remove('navigationInnerItemActive');
+                    else if (item.classList.contains('navigationOuterItemActive')) 
+                        item.classList.remove('navigationOuterItemActive');
+                });
+
+                let tagA = document.querySelectorAll(".navigationInnerItem, .navigationOuterItem")[i];
+                if (tagA.classList[0] == 'navigationInnerItem')
+                    tagA.classList.add('navigationInnerItemActive');  
+                else if (tagA.classList[0] == 'navigationOuterItem')
+                    tagA.classList.add('navigationOuterItemActive');                  
+            }
+        });
+
+        var outerContainer = document.getElementById("outContainer");
+        var navigationMenu = document.getElementById("navMenu");
+
+        var queryOUT = document.querySelector("#outContainer");
+        var queryNAV = document.querySelector("#navMenu");
+        var queryFTR = document.querySelector("#footerID");
+             
+        var valuesOUT = queryOUT.getBoundingClientRect();
+        var valuesNAV = queryNAV.getBoundingClientRect();
+        var valuesFTR = queryFTR.getBoundingClientRect();
+        
+        if (valuesNAV.bottom > valuesFTR.top){
+            navigationMenu.style.opacity = 0+"%";
+        }
+        else{
+            navigationMenu.style.opacity = 100+"%";
+        }
+    });
+</script>
+<script>
+    document.ready(()=>{
+        document.querySelectorAll(".navigationInnerItem, .navigationOuterItem").forEach((current) => 
+        {
+            current.addEventListener('click', () => {
+                document.querySelectorAll(".navigationInnerItem, .navigationOuterItem").forEach((item) => {
+                    if (item.classList.contains('navigationInnerItemActive')) 
+                        item.classList.remove('navigationInnerItemActive');
+                    else if (item.classList.contains('navigationOuterItemActive')) 
+                        item.classList.remove('navigationOuterItemActive');
+                });
+            
+                if (current.classList[0] == 'navigationInnerItem')
+                    current.classList.add('navigationInnerItemActive');  
+                else if (current.classList[0] == 'navigationOuterItem')
+                    current.classList.add('navigationOuterItemActive');              
+            });
+        });
+    });
+</script>
+
+<body class="main">
+    <div class="header">
+        <div class="HELP_MANUAL">
+            <a class="buttonManual" target="_blank" href="https://github.com/nekut-pr/Microsoft-Visio">GITHUB</a>
+            <a class="buttonManual" target="_blank" href="html/index.html">DOCUMENTATION</a>
+            <a class="buttonManual" target="_blank" href="VisioUserGuide.chm">CHM</a>
+        </div>
+    </div>
+
+    <div class="outerContainer" id="outContainer">
+        <div class="navigationMenu" id="navMenu">
+            <ul class="navigationList">
+                <li><a class="navigationOuterItem navigationOuterItemActive" href="#Introduction">Введение</a></li>
+                <li><a class="navigationOuterItem" href="#Module1">1. Построение диаграмм и схем</a></li>
+                <li><a class="navigationOuterItem" href="#Module2">2. Шаблоны (Templates)</a></li>
+                <li><a class="navigationOuterItem" href="#Module3">3. Моделирование бизнес-процессов</a></li>
+                <li><a class="navigationOuterItem" href="#Module4">4. Организационные структуры</a></li>
+                <li><a class="navigationOuterItem" href="#Module5">5. Визуализация данных</a></li>
+                <li><a class="navigationOuterItem" href="#Module6">6. Интеграция с Microsoft Office</a></li>
+                <li><a class="navigationOuterItem" href="#Module7">7. Таймлайны и дорожные карты</a></li>
+                <li><a class="navigationOuterItem" href="#Module8">8. Автоматизация диаграмм</a></li>
+                <li><a class="navigationOuterItem" href="#Module9">9. Пользовательские фигуры (Shapes)</a></li>
+                <li><a class="navigationOuterItem" href="#Module10">10. Анализ процессов</a></li>
+                <li><a class="navigationOuterItem" href="#Module11">11. Сетевые диаграммы</a></li>
+                <li><a class="navigationOuterItem" href="#Module12">12. Геймификация</a></li>
+                <li><a class="navigationOuterItem" href="#Module13">13. Планы помещений (Floor Plans)</a></li>
+                <li><a class="navigationOuterItem" href="#Module14">14. Комментарии и совместная работа</a></li>
+                <li><a class="navigationOuterItem" href="#Module15">15. Безопасность и управление доступом</a></li>
+                <li><a class="navigationOuterItem" href="#Module16">16. Облачная работа</a></li>
+                <li><a class="navigationOuterItem" href="#Module17">17. Резервное хранение</a></li>
+                <li><a class="navigationOuterItem" href="#Module18">18. Обмен диаграммами</a></li>
+                <li><a class="navigationOuterItem" href="#Module19">19. Обучение и документация</a></li>
+                <li><a class="navigationOuterItem" href="#Module20">20. Оценка и улучшение процессов</a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <section class="section" id="Introduction">
+                <div class="sectionContainer">
+                    <div class="introduction">
+                        <p class="titleStyle">Система визуального моделирования процессов в Microsoft Visio</p>
+                        <p class="paragraphMargin">Добро пожаловать в систему визуального моделирования процессов на базе Microsoft Visio. Наша система предоставляет комплексный набор инструментов для создания, анализа и оптимизации бизнес-процессов, организационных структур, сетевых схем и многого другого.</p>
+                        <p class="paragraphMargin">Система включает 20 функциональных модулей, каждый из которых решает конкретные задачи визуализации и автоматизации. Данная документация поможет вам освоить все возможности системы и достичь максимальной эффективности в вашей работе.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="Module1">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 1: Построение диаграмм и схем</p>
+                    <p class="textStyle">Создание блок-схем, организационных диаграмм, BPMN-диаграмм и других типов визуализации процессов. Модуль позволяет быстро создавать профессиональные схемы любой сложности.</p>
+                </div>
+            </section>
+
+            <section class="section" id="Module2">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 2: Шаблоны (Templates)</p>
+                    <p class="textStyle">Разработка и использование готовых шаблонов Visio для ускорения создания типовых схем и моделей. Сокращает время на создание повторяющихся элементов.</p>
+                </div>
+            </section>
+
+            <section class="section" id="Module3">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 3: Моделирование бизнес-процессов</p>
+                    <p class="textStyle">Построение моделей процессов в нотации BPMN с отображением последовательности действий, ролей участников и логики ветвления.</p>
+                </div>
+            </section>
+
+            <section class="section" id="Module4">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 4: Организационные структуры</p>
+                    <p class="textStyle">Визуализация структуры компании, иерархии подчинения, ролей сотрудников и связей между подразделениями.</p>
+                </div>
+            </section>
+
+            <section class="section" id="Module5">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 5: Визуализация данных</p>
+                    <p class="textStyle">Использование функций связывания данных (Data Linking) для отображения актуальной информации в диаграммах. Интеграция с Excel, SQL, SharePoint.</p>
+                </div>
+            </section>
+
+            <section class="section" id="Module6">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 6: Интеграция с Microsoft Office</p>
+                    <p class="textStyle">Импорт и экспорт данных из Excel, встраивание диаграмм в PowerPoint и Word, синхронизация с SharePoint и OneDrive.</p>
+                </div>
+            </section>
+
+            <section class="section" id="Module7">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 7: Таймлайны и дорожные карты</p>
+                    <p class="textStyle">Создание временных диаграмм (Timeline) для отображения этапов проектов, ключевых событий и стратегических планов развития.</p>
+                </div>
+            </section>
+
+            <section class="section" id="Module8">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 8: Автоматизация диаграмм</p>
+                    <p class="textStyle">Использование встроенных инструментов Visio для автоматического обновления схем на основе данных и создания макросов.</p>
+                </div>
+            </section>
+
+            <section class="section" id="Module9">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 9: Пользовательские фигуры (Shapes)</p>
+                    <p class="textStyle">Создание и настройка собственных фигур, библиотек элементов и их использование в диаграммах.</p>
+                </div>
+            </section>
+
+            <section class="section" id="Module10">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 10: Анализ процессов</p>
+                    <p class="textStyle">Визуальный анализ процессов для выявления узких мест, избыточных операций и точек оптимизации.</p>
+                </div>
+            </section>
+
+            <section class="section" id="Module11">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 11: Сетевые диаграммы</p>
+                    <p class="textStyle">Построение схем компьютерных сетей, IT-инфраструктуры, топологий и кабельных систем.</p>
+                </div>
+            </section>
+
+            <section class="section" id="Module12">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 12: Геймификация</p>
+                    <p class="textStyle">Использование условного форматирования (цвета, значки, индикаторы) для наглядного отображения статусов задач и прогресса.</p>
+                </div>
+            </section>
+
+            <section class="section" id="Module13">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 13: Планы помещений (Floor Plans)</p>
+                    <p class="textStyle">Создание планов помещений, офисов, складских зон с размещением мебели, оборудования и инженерных коммуникаций.</p>
+                </div>
+            </section>
+
+            <section class="section" id="Module14">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 14: Комментарии и совместная работа</p>
+                    <p class="textStyle">Добавление примечаний, рецензирование, отслеживание изменений и совместное редактирование схем в реальном времени.</p>
+                </div>
+            </section>
+
+            <section class="section" id="Module15">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 15: Безопасность и управление доступом</p>
+                    <p class="textStyle">Настройка прав доступа к документам, шифрование паролем, водяные знаки и аудит действий пользователей.</p>
+                </div>
+            </section>
+
+            <section class="section" id="Module16">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 16: Облачная работа</p>
+                    <p class="textStyle">Использование Visio Online для работы с диаграммами через браузер, совместное редактирование и доступ с любых устройств.</p>
+                </div>
+            </section>
+
+            <section class="section" id="Module17">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 17: Резервное хранение</p>
+                    <p class="textStyle">Сохранение файлов в облачных сервисах (OneDrive, SharePoint) с автоматическим версионированием и восстановлением.</p>
+                </div>
+            </section>
+
+            <section class="section" id="Module18">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 18: Обмен диаграммами</p>
+                    <p class="textStyle">Экспорт схем в различные форматы (PDF, PNG, SVG) и обмен между пользователями.</p>
+                </div>
+            </section>
+
+            <section class="section" id="Module19">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 19: Обучение и документация</p>
+                    <p class="textStyle">Создание обучающих схем, пошаговых инструкций и пользовательской документации с использованием Visio.</p>
+                </div>
+            </section>
+
+            <section class="section" id="Module20">
+                <div class="sectionContainer">
+                    <p class="titleStyle">Модуль 20: Оценка и улучшение процессов</p>
+                    <p class="textStyle">Анализ визуализированных процессов, сравнение с эталонными показателями и внесение изменений для повышения эффективности.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

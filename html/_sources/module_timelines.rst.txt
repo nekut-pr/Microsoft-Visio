@@ -1,0 +1,7 @@
+module\_timelines module
+========================
+
+.. automodule:: module_timelines
+   :members:
+   :show-inheritance:
+   :undoc-members:

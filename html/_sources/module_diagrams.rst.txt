@@ -1,0 +1,7 @@
+module\_diagrams module
+=======================
+
+.. automodule:: module_diagrams
+   :members:
+   :show-inheritance:
+   :undoc-members:

@@ -1,0 +1,7 @@
+module\_cloud\_work module
+==========================
+
+.. automodule:: module_cloud_work
+   :members:
+   :show-inheritance:
+   :undoc-members:

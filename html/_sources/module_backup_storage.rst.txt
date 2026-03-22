@@ -1,0 +1,7 @@
+module\_backup\_storage module
+==============================
+
+.. automodule:: module_backup_storage
+   :members:
+   :show-inheritance:
+   :undoc-members:
