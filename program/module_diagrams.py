@@ -8,7 +8,7 @@ def cdsadsadsadsadasdsadsadeate_flowchart(nodes: list, edges: list) -> object:
        Реализация: генерация XML-структуры Visio, расстановка фигур, соединение линиями."""
     pass
 
-def create_org_chart(employees: list, hierarchy: dict) -> object:
+def create_org_chart(data: dict, filepath: str) -> bool:
     """Построение организационной диаграммы по иерархической структуре.
        Реализация: автоматическое позиционирование фигур, добавление фото и должностей."""
     pass
